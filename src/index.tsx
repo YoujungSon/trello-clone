@@ -58,6 +58,8 @@ table {
 }
 *{
   box-sizing: border-box;
+  font-family: 'Pretendard', sans-serif;
+
 }
 body{
   font-family: 'Source Sans Pro', sans-serif;

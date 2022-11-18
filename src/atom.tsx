@@ -1,10 +1,17 @@
-import { atom, selector } from 'recoil';
+import { atom } from 'recoil';
+import { recoilPersist } from 'recoil-persist';
+const { persistAtom } = recoilPersist();
+
+export interface IAreaProps {
+  isDraggingFromThis: boolean;
+  isDraggingOver: boolean;
+}
 
 export interface IToDo {
   id: number;
   text: string;
 }
-interface IToDoState {
+export interface IToDoState {
   [key: string]: IToDo[];
 }
 
@@ -15,4 +22,5 @@ export const toDoState = atom<IToDoState>({
     doing: [],
     done: [],
   },
+  effects_UNSTABLE: [persistAtom],
 });

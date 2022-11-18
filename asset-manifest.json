@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/react-todo-app/static/js/main.ee540849.js",
-    "index.html": "/react-todo-app/index.html",
-    "main.ee540849.js.map": "/react-todo-app/static/js/main.ee540849.js.map"
+    "main.js": "/trello-clone/static/js/main.53e29420.js",
+    "index.html": "/trello-clone/index.html",
+    "main.53e29420.js.map": "/trello-clone/static/js/main.53e29420.js.map"
   },
   "entrypoints": [
-    "static/js/main.ee540849.js"
+    "static/js/main.53e29420.js"
   ]
 }

@@ -18,25 +18,18 @@ const Wrapper = styled.div`
 
 function App() {
   const [toDos, setToDos] = useRecoilState(toDoState);
-  console.log(toDos);
   const onDragEnd = (info: DropResult) => {
     const { destination, source } = info;
-
-    console.log('진짜임', destination, '그다음', source);
     if (!destination) return;
-
     if (source.droppableId === 'Boards') {
       setToDos((allBoards) => {
         const boardsList = Object.keys(allBoards);
-        console.log('보드리스트', boardsList);
         const taskObj = boardsList[source.index];
-        console.log('테스크오브젝', taskObj);
         boardsList.splice(source.index, 1);
         boardsList.splice(destination.index, 0, taskObj);
-        console.log('수정후', boardsList);
         let boards = {};
         boardsList.map((board) => {
-          boards = { ...boards, [board]: allBoards[board] };
+          return (boards = { ...boards, [board]: allBoards[board] });
         });
         return { ...boards };
       });
